@@ -1,9 +1,10 @@
-
-import React from 'react'
+import { Button } from "./components/ui/button"
 
 const App = () => {
   return (
-    <div>App</div>
+    <Button
+    className="bg-light-1"
+    >Click me</Button>
   )
 }
 
