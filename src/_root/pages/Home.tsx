@@ -1,8 +1,14 @@
+import Header from "@/components/shared/Header"
+import Navbar from "@/components/shared/Navbar"
 
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <section className="relative">
+      <Navbar />
+      <Header />
+
+    </section>
   )
 }
 

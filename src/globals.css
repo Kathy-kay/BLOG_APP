@@ -9,6 +9,18 @@
     @apply box-border list-none p-0 m-0 scroll-smooth;
   }
   body {
-    @apply  bg-dark-2;
+    @apply  bg-light-2 min-h-screen;
+  }
+}
+
+@layer utilities{
+  .navbar{
+    @apply fixed left-0 right-0 bg-light-2 w-full z-50 h-20
+  }
+  .flex-between{
+    @apply flex items-center justify-between
+  }
+  .btn-fill{
+    @apply border border-primary-blue bg-primary-blue rounded-md px-5 font-semibold text-base text-light-1
   }
 }

@@ -11,11 +11,11 @@ import {createBrowserRouter} from 'react-router-dom'
 
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: "/auth",
         element: <AuthLayouts />,
         children: [
-            {path: "/sign-in", element: <SigninForm />},
-            {path: "/sign-up", element: <SignupForm />}
+            {path: "/auth/sign-in", element: <SigninForm />},
+            {path: "/auth/sign-up", element: <SignupForm />}
         ],
     },
     {
