@@ -1,18 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
-import { AlignJustify, X} from 'lucide-react';
+import { AlignJustify, X } from "lucide-react";
 import { useState } from "react";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () =>{
-    setIsMenuOpen(prev => !prev)
-  }
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
   return (
     <header className="navbar">
-      <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center px-10 py-5 text-base font-semibold gap-10 ">
+      <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center px-10 py-5  font-semibold gap-20 ">
         <div className="flex-between">
           <Link to="/">
             <img
@@ -23,30 +23,36 @@ const Navbar = () => {
             />
           </Link>
           <div className="block lg:hidden">
-          {isMenuOpen ? (
-            <X 
-              size={40}
-              onClick={toggleMenu}
-              className="cursor-pointer text-xl"
-            />
-          ): (
-            <AlignJustify
-            size={40}
-            onClick={toggleMenu}
-            className="cursor-pointer text-xl"
-            />
-          )}
+            {isMenuOpen ? (
+              <X
+                size={40}
+                onClick={toggleMenu}
+                className="cursor-pointer text-xl"
+              />
+            ) : (
+              <AlignJustify
+                size={40}
+                onClick={toggleMenu}
+                className="cursor-pointer text-xl"
+              />
+            )}
           </div>
         </div>
-
-        <ul className={`flex gap-10 lg:gap-7 lg:flex-row flex-col font-semibold max-md:mt- text-base max-md:hidden ${isMenuOpen ? 'block' : 'hidden'} `}>
+        {/* ""flex flex-col lg:flex-row gap-12 lg:gap-12 text-xl" */}
+        <ul
+          className={`flex flex-col lg:flex-row gap-12 lg:gap-12 text-xl  lg:text-base ${
+            isMenuOpen ? 'flex' : 'hidden lg:flex'
+          }`}
+        >
           <li>Home</li>
           <li>About us</li>
           <li>Contact</li>
           <li>Blog</li>
         </ul>
 
-        <div className={`flex lg:flex-row gap-10  lg:gap-7 flex-col max-md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
+        <div
+          className={`flex  flex-col lg:flex-row gap-12 text-base ${isMenuOpen ? 'flex' : 'hidden lg:flex'}`}
+        >
           <Button
             className=" border border-primary-blue rounded-md px-5 text-lg "
             onClick={() => navigate("/auth/sign-in")}
