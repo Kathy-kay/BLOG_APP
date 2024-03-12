@@ -21,6 +21,7 @@
       colors: {
         'dark-1': '#000000',
         "primary-blue": "#543EE0",
+        "line-color": "D0D0D0",
       'dark-2': '#09090A',
       'dark-3': '#101012',
       'dark-4': '#1F1F22',

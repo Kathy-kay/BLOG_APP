@@ -1,6 +1,7 @@
 import AboutUs from "@/components/shared/AboutUs"
 import Header from "@/components/shared/Header"
 import Navbar from "@/components/shared/Navbar"
+import Services from "@/components/shared/Services"
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
       <Navbar />
       <Header />
       <AboutUs />
+      <Services />
     </section>
   )
 }

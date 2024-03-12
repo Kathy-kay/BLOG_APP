@@ -12,7 +12,7 @@ const Navbar = () => {
   };
   return (
     <header className="navbar">
-      <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center px-10 py-5  font-semibold gap-20 ">
+      <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center px-10 py-5  font-semibold gap-20 shadow-md">
         <div className="flex-between">
           <Link to="/">
             <img
@@ -46,7 +46,7 @@ const Navbar = () => {
         >
           <li>Home</li>
           <li>About us</li>
-          <li>Contact</li>
+          <li>Services</li>
           <li>Blog</li>
         </ul>
 
